@@ -1,4 +1,4 @@
-# Streaming-Coomon
+# Streaming-Common
 The Spark Streaming Application
 ## Setup
 The local environment has a containner to run Spark. All containers are indirectly based on Ubuntu 14.04 LTS
