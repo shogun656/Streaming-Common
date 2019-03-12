@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  spark:
+    build:
+      context: .
+      dockerfile: ./compose/spark/Dockerfile
+    command: /startSpark.sh
+    environment:
+      AWS_REGION: 'us-east-1' # This is used by the Java SDK
+    volumes:
+    - .:/app
+    - ~/.sbt:/root/.sbt
+    - ~/.ivy2:/root/.ivy2

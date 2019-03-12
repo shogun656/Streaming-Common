@@ -1,0 +1,5 @@
+package streaming
+
+class MainStream {
+
+}
