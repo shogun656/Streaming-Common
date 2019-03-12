@@ -1,7 +1,7 @@
 # Streaming-Common
 The Spark Streaming Application
 ## Setup
-The local environment has a containner to run Spark. All containers are indirectly based on Ubuntu 14.04 LTS
+The local environment has a container to run Spark. All containers are indirectly based on Ubuntu 14.04 LTS
 
 1. Install Docker for Mac Beta.
 1. Build your environment with `docker-compose build`.
