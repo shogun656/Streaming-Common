@@ -2,14 +2,24 @@ version: '2'
 
 services:
 
+  kafka:
+    build:
+      context: .
+      dockerfile: ./compose/kafka/Dockerfile
+    command: /startKafka.sh
+    env_file:
+    - .env
+
   spark:
     build:
       context: .
       dockerfile: ./compose/spark/Dockerfile
     command: /startSpark.sh
-    environment:
-      AWS_REGION: 'us-east-1' # This is used by the Java SDK
+    env_file:
+      - .env
     volumes:
     - .:/app
     - ~/.sbt:/root/.sbt
     - ~/.ivy2:/root/.ivy2
+    depends_on:
+      - kafka

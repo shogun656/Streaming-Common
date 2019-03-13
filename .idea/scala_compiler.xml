@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="sbt 1" modules="twitter-streaming_7979,Twitter-Streaming" />
+    <profile name="sbt 1" modules="streaming-common_8776,Twitter-Streaming" />
   </component>
 </project>
