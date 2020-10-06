@@ -2,6 +2,12 @@ version: '2'
 
 services:
 
+  postgres:
+    image: mdillon/postgis:9.6
+    environment:
+      - POSTGRES_USER=apm
+      - POSTGRES_PASSWORD=apm
+
   kafka:
     build:
       context: .
@@ -23,3 +29,4 @@ services:
     - ~/.ivy2:/root/.ivy2
     depends_on:
       - kafka
+      - -postgress
